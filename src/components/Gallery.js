@@ -1,11 +1,11 @@
-
 import GalleryItem from './GalleryItem'
+import{useContext} from 'react'
+import { DataContext } from '../context/DataContext'
 
+const Gallery = () => {
+    const data = useContext(DataContext)
 
-const Gallery = (props) => {
-    const myData = props.data.result.read()
-
-    const display = myData.map((item, index) => {
+    const display = data.map((item, index) => {
         return (
             <GalleryItem item={item} key={index} />
         )
@@ -16,6 +16,42 @@ const Gallery = (props) => {
             {display}
         </div>
     )
+ 
 }
 
 export default Gallery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import {useContext} from 'react'
+// import { DataContext } from '../context/DataContext'
+// import GalleryItem from '../GalleryItem'
+
+
+
+// function Gallery() {
+//   const data= useContext(DataContext)
+//   const display =data.map((item,index)=>{
+//   return (
+//       <GalleryItem item={item} key={index}/>
+      
+//   )
+// })
+// return(
+//   <div>
+//     {display}
+//   </div>
+// )
+// >>>>>>> with_router
