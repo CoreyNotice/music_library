@@ -12,8 +12,7 @@ function App() {
 
   useEffect(() => {
     if (searchTerm) {
-      document.title=`${searchTerm} Music`
-      console.log(fetchData(searchTerm))
+
       setData(fetchData(searchTerm))
   }
   }, [searchTerm])

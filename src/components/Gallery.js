@@ -1,5 +1,5 @@
 
-import GalleryItem from '../GalleryItem'
+import GalleryItem from './GalleryItem'
 
 
 const Gallery = (props) => {
